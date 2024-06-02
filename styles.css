@@ -1,0 +1,74 @@
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.photos, .text-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+}
+
+/* Imagens */
+.photos img {
+    max-width: 35%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.photos img:hover {
+    transform: scale(1.1);
+}
+
+/* Textos */
+.text-section {
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-box {
+    background-color: #535253;
+    margin: 10px 0;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #535252;
+    width: 80%;
+    max-width: 600px;
+    transition: background-color 0.3s;
+}
+
+.text-box:hover {
+    background-color: #ffffff;
+}
+
+/* Responsividade */
+@media (min-width: 769px) {
+    .text-section {
+        flex-direction: row;
+    }
+
+    .text-box {
+        width: 30%;
+    }
+}
+
+@media (min-width: 1281px) {
+    .photos {
+        flex-direction: row;
+    }
+}
